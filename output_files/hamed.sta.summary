@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock'
+Slack : -5.197
+TNS   : -140.284
+
+Type  : Slow Model Setup 'controller:inst4|ps.011'
+Slack : -3.763
+TNS   : -38.254
+
+Type  : Slow Model Hold 'clock'
+Slack : -1.179
+TNS   : -12.757
+
+Type  : Slow Model Hold 'controller:inst4|ps.011'
+Slack : 0.614
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.380
+TNS   : -59.380
+
+Type  : Slow Model Minimum Pulse Width 'controller:inst4|ps.011'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'controller:inst4|ps.011'
+Slack : -1.537
+TNS   : -13.772
+
+Type  : Fast Model Setup 'clock'
+Slack : -1.167
+TNS   : -28.442
+
+Type  : Fast Model Hold 'clock'
+Slack : -0.774
+TNS   : -10.934
+
+Type  : Fast Model Hold 'controller:inst4|ps.011'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.380
+TNS   : -59.380
+
+Type  : Fast Model Minimum Pulse Width 'controller:inst4|ps.011'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

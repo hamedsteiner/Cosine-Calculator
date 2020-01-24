@@ -1,0 +1,1762 @@
+TimeQuest Timing Analyzer report for hamed
+Wed May 25 14:13:43 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Setup: 'controller:inst4|ps.011'
+ 13. Slow Model Hold: 'clock'
+ 14. Slow Model Hold: 'controller:inst4|ps.011'
+ 15. Slow Model Minimum Pulse Width: 'clock'
+ 16. Slow Model Minimum Pulse Width: 'controller:inst4|ps.011'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'controller:inst4|ps.011'
+ 27. Fast Model Setup: 'clock'
+ 28. Fast Model Hold: 'clock'
+ 29. Fast Model Hold: 'controller:inst4|ps.011'
+ 30. Fast Model Minimum Pulse Width: 'clock'
+ 31. Fast Model Minimum Pulse Width: 'controller:inst4|ps.011'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; hamed                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C6                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                           ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; Clock Name              ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                     ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; clock                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                   ;
+; controller:inst4|ps.011 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { controller:inst4|ps.011 } ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 168.27 MHz ; 168.27 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------+
+; Slow Model Setup Summary                         ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -5.197 ; -140.284      ;
+; controller:inst4|ps.011 ; -3.763 ; -38.254       ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow Model Hold Summary                          ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -1.179 ; -12.757       ;
+; controller:inst4|ps.011 ; 0.614  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary           ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -1.380 ; -59.380       ;
+; controller:inst4|ps.011 ; 0.500  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                          ;
++--------+--------------------+---------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node             ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+---------------------+-------------------------+-------------+--------------+------------+------------+
+; -5.197 ; MUX:inst16|out[4]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.883      ;
+; -5.163 ; MUX:inst16|out[7]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.895      ;
+; -5.157 ; MUX:inst16|out[2]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.883      ;
+; -5.156 ; MUX:inst16|out[6]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.809     ; 4.883      ;
+; -5.155 ; MUX:inst16|out[3]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.805     ; 4.886      ;
+; -5.155 ; MUX:inst16|out[8]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.885      ;
+; -5.154 ; MUX:inst16|out[5]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.884      ;
+; -5.152 ; MUX:inst16|out[0]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.808     ; 4.880      ;
+; -5.152 ; MUX:inst16|out[1]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.884      ;
+; -5.120 ; MUX:inst16|out[4]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.806      ;
+; -5.114 ; MUX:inst16|out[12] ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.874      ;
+; -5.113 ; MUX:inst16|out[9]  ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.775     ; 4.874      ;
+; -5.112 ; MUX:inst16|out[11] ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.773     ; 4.875      ;
+; -5.103 ; MUX:inst16|out[10] ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.865      ;
+; -5.086 ; MUX:inst16|out[7]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.818      ;
+; -5.081 ; MUX:inst16|out[13] ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.807      ;
+; -5.080 ; MUX:inst16|out[2]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.806      ;
+; -5.079 ; MUX:inst16|out[6]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.809     ; 4.806      ;
+; -5.078 ; MUX:inst16|out[3]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.805     ; 4.809      ;
+; -5.078 ; MUX:inst16|out[8]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.808      ;
+; -5.077 ; MUX:inst16|out[5]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.807      ;
+; -5.075 ; MUX:inst16|out[0]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.808     ; 4.803      ;
+; -5.075 ; MUX:inst16|out[1]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.807      ;
+; -5.043 ; MUX:inst16|out[4]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.729      ;
+; -5.037 ; MUX:inst16|out[12] ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.797      ;
+; -5.036 ; MUX:inst16|out[9]  ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.775     ; 4.797      ;
+; -5.036 ; MUX:inst16|out[14] ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.798      ;
+; -5.036 ; MUX:inst16|out[15] ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.796      ;
+; -5.035 ; MUX:inst16|out[11] ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.773     ; 4.798      ;
+; -5.026 ; MUX:inst16|out[10] ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.788      ;
+; -5.009 ; MUX:inst16|out[7]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.741      ;
+; -5.003 ; MUX:inst16|out[2]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.729      ;
+; -5.002 ; MUX:inst16|out[6]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.809     ; 4.729      ;
+; -5.001 ; MUX:inst16|out[3]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.805     ; 4.732      ;
+; -5.001 ; MUX:inst16|out[8]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.731      ;
+; -5.000 ; MUX:inst16|out[5]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.730      ;
+; -4.998 ; MUX:inst16|out[0]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.808     ; 4.726      ;
+; -4.998 ; MUX:inst16|out[1]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.730      ;
+; -4.959 ; MUX:inst16|out[9]  ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.775     ; 4.720      ;
+; -4.958 ; MUX:inst16|out[11] ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.773     ; 4.721      ;
+; -4.949 ; MUX:inst16|out[10] ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.711      ;
+; -4.943 ; RegT:inst15|out[7] ; RegT:inst15|out[4]  ; clock                   ; clock       ; 1.000        ; 0.000      ; 5.979      ;
+; -4.914 ; MUX:inst16|out[4]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.600      ;
+; -4.889 ; MUX:inst16|out[4]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.575      ;
+; -4.885 ; MUX:inst16|out[4]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.571      ;
+; -4.880 ; MUX:inst16|out[7]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.612      ;
+; -4.875 ; MUX:inst16|out[13] ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.601      ;
+; -4.874 ; MUX:inst16|out[2]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.600      ;
+; -4.873 ; MUX:inst16|out[6]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.809     ; 4.600      ;
+; -4.872 ; MUX:inst16|out[3]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.805     ; 4.603      ;
+; -4.872 ; MUX:inst16|out[8]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.602      ;
+; -4.871 ; MUX:inst16|out[5]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.601      ;
+; -4.869 ; MUX:inst16|out[0]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.808     ; 4.597      ;
+; -4.869 ; MUX:inst16|out[1]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.601      ;
+; -4.866 ; RegT:inst15|out[7] ; RegT:inst15|out[10] ; clock                   ; clock       ; 1.000        ; 0.000      ; 5.902      ;
+; -4.855 ; MUX:inst16|out[7]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.587      ;
+; -4.851 ; MUX:inst16|out[7]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.583      ;
+; -4.850 ; MUX:inst16|out[13] ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.576      ;
+; -4.849 ; MUX:inst16|out[2]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.575      ;
+; -4.848 ; MUX:inst16|out[6]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.809     ; 4.575      ;
+; -4.847 ; MUX:inst16|out[3]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.805     ; 4.578      ;
+; -4.847 ; MUX:inst16|out[8]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.577      ;
+; -4.846 ; MUX:inst16|out[5]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.576      ;
+; -4.846 ; MUX:inst16|out[13] ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.572      ;
+; -4.845 ; MUX:inst16|out[2]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.810     ; 4.571      ;
+; -4.844 ; MUX:inst16|out[0]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.808     ; 4.572      ;
+; -4.844 ; MUX:inst16|out[1]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.576      ;
+; -4.844 ; MUX:inst16|out[6]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.809     ; 4.571      ;
+; -4.843 ; MUX:inst16|out[3]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.805     ; 4.574      ;
+; -4.843 ; MUX:inst16|out[8]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.573      ;
+; -4.842 ; MUX:inst16|out[5]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.806     ; 4.572      ;
+; -4.840 ; MUX:inst16|out[0]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.808     ; 4.568      ;
+; -4.840 ; MUX:inst16|out[1]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.572      ;
+; -4.831 ; MUX:inst16|out[12] ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.591      ;
+; -4.830 ; MUX:inst16|out[9]  ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.775     ; 4.591      ;
+; -4.830 ; MUX:inst16|out[14] ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.592      ;
+; -4.829 ; MUX:inst16|out[11] ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.773     ; 4.592      ;
+; -4.820 ; MUX:inst16|out[10] ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.582      ;
+; -4.806 ; MUX:inst16|out[12] ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.566      ;
+; -4.805 ; MUX:inst16|out[9]  ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.775     ; 4.566      ;
+; -4.805 ; MUX:inst16|out[14] ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.567      ;
+; -4.805 ; MUX:inst16|out[15] ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.565      ;
+; -4.804 ; MUX:inst16|out[11] ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.773     ; 4.567      ;
+; -4.802 ; MUX:inst16|out[12] ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.562      ;
+; -4.801 ; MUX:inst16|out[9]  ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.775     ; 4.562      ;
+; -4.801 ; MUX:inst16|out[14] ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.563      ;
+; -4.801 ; MUX:inst16|out[15] ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.776     ; 4.561      ;
+; -4.800 ; MUX:inst16|out[11] ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.773     ; 4.563      ;
+; -4.795 ; MUX:inst16|out[10] ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.557      ;
+; -4.791 ; MUX:inst16|out[10] ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.774     ; 4.553      ;
+; -4.789 ; RegT:inst15|out[7] ; RegT:inst15|out[3]  ; clock                   ; clock       ; 1.000        ; 0.000      ; 5.825      ;
+; -4.671 ; MUX:inst16|out[4]  ; RegT:inst15|out[9]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.357      ;
+; -4.660 ; RegT:inst15|out[7] ; RegT:inst15|out[6]  ; clock                   ; clock       ; 1.000        ; 0.000      ; 5.696      ;
+; -4.645 ; MUX:inst16|out[4]  ; RegT:inst15|out[7]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.331      ;
+; -4.637 ; MUX:inst16|out[7]  ; RegT:inst15|out[9]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.804     ; 4.369      ;
+; -4.635 ; RegT:inst15|out[7] ; RegT:inst15|out[14] ; clock                   ; clock       ; 1.000        ; 0.000      ; 5.671      ;
+; -4.634 ; MUX:inst16|out[4]  ; RegT:inst15|out[12] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.320      ;
+; -4.633 ; MUX:inst16|out[4]  ; RegT:inst15|out[11] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.319      ;
+; -4.633 ; MUX:inst16|out[4]  ; RegT:inst15|out[0]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.319      ;
+; -4.632 ; MUX:inst16|out[4]  ; RegT:inst15|out[1]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.850     ; 4.318      ;
++--------+--------------------+---------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'controller:inst4|ps.011'                                                                                             ;
++--------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node            ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; -3.763 ; controller:inst4|ps.100 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.523      ; 2.636      ;
+; -3.702 ; controller:inst4|ps.101 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.519      ; 2.760      ;
+; -3.636 ; counter:inst2|temp[0]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.807      ; 2.793      ;
+; -3.608 ; counter:inst2|temp[2]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.804      ; 2.762      ;
+; -3.509 ; controller:inst4|ps.101 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.521      ; 2.770      ;
+; -3.479 ; counter:inst2|temp[1]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.804      ; 2.633      ;
+; -3.465 ; controller:inst4|ps.100 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.519      ; 2.523      ;
+; -3.454 ; controller:inst4|ps.101 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.523      ; 2.327      ;
+; -3.307 ; counter:inst2|temp[2]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.800      ; 2.646      ;
+; -3.279 ; counter:inst2|temp[1]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.800      ; 2.618      ;
+; -3.272 ; controller:inst4|ps.100 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.521      ; 2.533      ;
+; -3.223 ; counter:inst2|temp[0]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.803      ; 2.565      ;
+; -3.213 ; counter:inst2|temp[2]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.802      ; 2.755      ;
+; -3.084 ; counter:inst2|temp[1]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.802      ; 2.626      ;
+; -3.023 ; counter:inst2|temp[0]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.805      ; 2.568      ;
+; -2.976 ; RegX:inst|out[0]        ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.808      ; 2.134      ;
+; -2.378 ; controller:inst4|ps.101 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.519      ; 2.540      ;
+; -2.365 ; controller:inst4|ps.101 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.565      ; 2.477      ;
+; -2.343 ; counter:inst2|temp[0]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.804      ; 2.790      ;
+; -2.315 ; RegX:inst|out[7]        ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.804      ; 1.658      ;
+; -2.315 ; controller:inst4|ps.100 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.520      ; 2.478      ;
+; -2.304 ; controller:inst4|ps.100 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.491      ; 2.470      ;
+; -2.166 ; controller:inst4|ps.100 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.488      ; 2.293      ;
+; -2.155 ; controller:inst4|ps.100 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.489      ; 2.465      ;
+; -2.141 ; controller:inst4|ps.100 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.519      ; 2.303      ;
+; -2.136 ; controller:inst4|ps.100 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.565      ; 2.248      ;
+; -2.127 ; controller:inst4|ps.100 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.490      ; 2.289      ;
+; -2.127 ; controller:inst4|ps.100 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.489      ; 2.288      ;
+; -2.125 ; controller:inst4|ps.101 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.525      ; 2.291      ;
+; -2.120 ; RegX:inst|out[8]        ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.806      ; 1.666      ;
+; -2.020 ; controller:inst4|ps.101 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.491      ; 2.186      ;
+; -2.006 ; controller:inst4|ps.101 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.520      ; 2.169      ;
+; -1.979 ; counter:inst2|temp[2]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.800      ; 2.422      ;
+; -1.953 ; counter:inst2|temp[1]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.846      ; 2.346      ;
+; -1.951 ; counter:inst2|temp[1]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.800      ; 2.394      ;
+; -1.899 ; counter:inst2|temp[2]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.806      ; 2.346      ;
+; -1.897 ; counter:inst2|temp[0]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.849      ; 2.293      ;
+; -1.895 ; counter:inst2|temp[0]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.803      ; 2.341      ;
+; -1.894 ; controller:inst4|ps.101 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.488      ; 2.021      ;
+; -1.891 ; RegX:inst|out[13]       ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.809      ; 2.382      ;
+; -1.888 ; controller:inst4|ps.100 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.525      ; 2.054      ;
+; -1.884 ; controller:inst4|ps.101 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.489      ; 2.194      ;
+; -1.854 ; controller:inst4|ps.101 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.490      ; 2.016      ;
+; -1.848 ; controller:inst4|ps.101 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.489      ; 2.009      ;
+; -1.835 ; counter:inst2|temp[2]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.801      ; 2.279      ;
+; -1.825 ; controller:inst4|ps.101 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.491      ; 1.993      ;
+; -1.819 ; counter:inst2|temp[1]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.801      ; 2.263      ;
+; -1.795 ; controller:inst4|ps.101 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.525      ; 2.002      ;
+; -1.757 ; counter:inst2|temp[2]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.846      ; 2.150      ;
+; -1.747 ; controller:inst4|ps.101 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.524      ; 1.911      ;
+; -1.727 ; controller:inst4|ps.101 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.521      ; 1.930      ;
+; -1.667 ; counter:inst2|temp[0]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.809      ; 2.117      ;
+; -1.596 ; controller:inst4|ps.100 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.525      ; 1.803      ;
+; -1.547 ; controller:inst4|ps.100 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.491      ; 1.715      ;
+; -1.528 ; RegX:inst|out[3]        ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.805      ; 1.976      ;
+; -1.469 ; controller:inst4|ps.100 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.524      ; 1.633      ;
+; -1.463 ; controller:inst4|ps.100 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.521      ; 1.666      ;
+; -1.063 ; RegX:inst|out[15]       ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.776      ; 1.516      ;
+; -0.987 ; RegX:inst|out[1]        ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.804      ; 1.434      ;
+; -0.986 ; RegX:inst|out[6]        ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.809      ; 1.435      ;
+; -0.984 ; RegX:inst|out[2]        ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.810      ; 1.435      ;
+; -0.982 ; RegX:inst|out[5]        ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.806      ; 1.470      ;
+; -0.822 ; RegX:inst|out[12]       ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.783      ; 1.280      ;
+; -0.687 ; RegX:inst|out[11]       ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.780      ; 1.106      ;
+; -0.678 ; RegX:inst|out[14]       ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.781      ; 1.280      ;
+; -0.649 ; RegX:inst|out[9]        ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.782      ; 1.103      ;
+; -0.646 ; RegX:inst|out[10]       ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.781      ; 1.099      ;
+; -0.567 ; RegX:inst|out[4]        ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.857      ; 0.971      ;
++--------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                    ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -1.179 ; controller:inst4|ps.011 ; controller:inst4|ps.100 ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.624      ; 1.961      ;
+; -0.748 ; controller:inst4|ps.011 ; RegT:inst15|out[8]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.342      ; 2.110      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[1]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[2]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[3]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[4]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[5]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[6]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[7]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[9]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[10]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[11]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[12]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[13]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[14]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[15]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.722 ; controller:inst4|ps.011 ; RegT:inst15|out[0]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 2.339      ; 2.133      ;
+; -0.679 ; controller:inst4|ps.011 ; controller:inst4|ps.100 ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.624      ; 1.961      ;
+; -0.248 ; controller:inst4|ps.011 ; RegT:inst15|out[8]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.342      ; 2.110      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[1]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[2]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[3]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[4]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[5]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[6]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[7]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[9]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[10]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[11]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[12]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[13]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[14]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[15]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; -0.222 ; controller:inst4|ps.011 ; RegT:inst15|out[0]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 2.339      ; 2.133      ;
+; 0.391  ; counter:inst2|temp[1]   ; counter:inst2|temp[1]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; counter:inst2|temp[2]   ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; controller:inst4|ps.000 ; controller:inst4|ps.000 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; controller:inst4|ps.001 ; controller:inst4|ps.001 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; counter:inst2|temp[0]   ; counter:inst2|temp[0]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.541  ; controller:inst4|ps.001 ; counter:inst2|temp[0]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.807      ;
+; 0.547  ; counter:inst2|temp[0]   ; controller:inst4|ps.011 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.813      ;
+; 0.795  ; RegR:inst14|out[0]      ; RegR:inst14|out[0]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795  ; RegR:inst14|out[8]      ; RegR:inst14|out[8]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.061      ;
+; 0.800  ; RegR:inst14|out[7]      ; RegR:inst14|out[7]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.066      ;
+; 0.802  ; RegR:inst14|out[4]      ; RegR:inst14|out[4]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802  ; RegR:inst14|out[6]      ; RegR:inst14|out[6]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.806  ; RegR:inst14|out[9]      ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; RegR:inst14|out[11]     ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; RegR:inst14|out[14]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.809  ; controller:inst4|ps.000 ; controller:inst4|ps.001 ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.075      ;
+; 0.817  ; controller:inst4|ps.001 ; controller:inst4|ps.010 ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.083      ;
+; 0.827  ; RegR:inst14|out[15]     ; RegR:inst14|out[15]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.093      ;
+; 0.835  ; RegR:inst14|out[1]      ; RegR:inst14|out[1]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835  ; RegR:inst14|out[3]      ; RegR:inst14|out[3]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.101      ;
+; 0.836  ; RegR:inst14|out[10]     ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.102      ;
+; 0.837  ; RegR:inst14|out[12]     ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.103      ;
+; 0.839  ; RegR:inst14|out[13]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.105      ;
+; 0.990  ; counter:inst2|temp[0]   ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.003      ; 1.259      ;
+; 0.991  ; counter:inst2|temp[0]   ; counter:inst2|temp[1]   ; clock                   ; clock       ; 0.000        ; 0.003      ; 1.260      ;
+; 1.004  ; controller:inst4|ps.110 ; counter:inst2|temp[0]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.270      ;
+; 1.011  ; RegR:inst14|out[2]      ; RegR:inst14|out[2]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.277      ;
+; 1.014  ; RegR:inst14|out[5]      ; RegR:inst14|out[5]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.280      ;
+; 1.049  ; controller:inst4|ps.110 ; controller:inst4|ps.000 ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.315      ;
+; 1.158  ; controller:inst4|ps.101 ; controller:inst4|ps.110 ; clock                   ; clock       ; 0.000        ; -0.284     ; 1.140      ;
+; 1.178  ; RegR:inst14|out[8]      ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.444      ;
+; 1.178  ; RegR:inst14|out[0]      ; RegR:inst14|out[1]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.444      ;
+; 1.183  ; RegR:inst14|out[7]      ; RegR:inst14|out[8]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.449      ;
+; 1.185  ; RegR:inst14|out[4]      ; RegR:inst14|out[5]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.451      ;
+; 1.189  ; RegR:inst14|out[9]      ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; RegR:inst14|out[11]     ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.455      ;
+; 1.208  ; controller:inst4|ps.001 ; counter:inst2|temp[1]   ; clock                   ; clock       ; 0.000        ; 0.003      ; 1.477      ;
+; 1.208  ; controller:inst4|ps.001 ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.003      ; 1.477      ;
+; 1.221  ; RegR:inst14|out[3]      ; RegR:inst14|out[4]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221  ; RegR:inst14|out[1]      ; RegR:inst14|out[2]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.487      ;
+; 1.224  ; controller:inst4|ps.010 ; controller:inst4|ps.011 ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; RegR:inst14|out[10]     ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225  ; RegR:inst14|out[13]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225  ; RegR:inst14|out[12]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.491      ;
+; 1.231  ; counter:inst2|temp[1]   ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.497      ;
+; 1.249  ; RegR:inst14|out[8]      ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.515      ;
+; 1.249  ; RegR:inst14|out[0]      ; RegR:inst14|out[2]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.515      ;
+; 1.254  ; RegR:inst14|out[7]      ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.520      ;
+; 1.256  ; RegR:inst14|out[4]      ; RegR:inst14|out[6]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.522      ;
+; 1.257  ; controller:inst4|ps.110 ; controller:inst4|ps.011 ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.523      ;
+; 1.260  ; RegR:inst14|out[9]      ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; RegR:inst14|out[11]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.526      ;
+; 1.281  ; RegR:inst14|out[14]     ; RegR:inst14|out[15]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.547      ;
+; 1.282  ; RegR:inst14|out[6]      ; RegR:inst14|out[7]      ; clock                   ; clock       ; 0.000        ; -0.005     ; 1.543      ;
+; 1.292  ; RegR:inst14|out[1]      ; RegR:inst14|out[3]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292  ; RegR:inst14|out[3]      ; RegR:inst14|out[5]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.558      ;
+; 1.295  ; RegR:inst14|out[10]     ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296  ; RegR:inst14|out[12]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.562      ;
+; 1.320  ; RegR:inst14|out[8]      ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.586      ;
+; 1.320  ; RegR:inst14|out[0]      ; RegR:inst14|out[3]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.586      ;
+; 1.325  ; RegR:inst14|out[7]      ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.591      ;
+; 1.331  ; RegR:inst14|out[9]      ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331  ; RegR:inst14|out[11]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 1.597      ;
+; 1.347  ; controller:inst4|ps.001 ; RegR:inst14|out[7]      ; clock                   ; clock       ; 0.000        ; 0.014      ; 1.627      ;
+; 1.347  ; controller:inst4|ps.001 ; RegR:inst14|out[8]      ; clock                   ; clock       ; 0.000        ; 0.014      ; 1.627      ;
+; 1.347  ; controller:inst4|ps.001 ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.014      ; 1.627      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'controller:inst4|ps.011'                                                                                             ;
++-------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node            ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; 0.614 ; RegX:inst|out[4]        ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.857      ; 0.971      ;
+; 0.818 ; RegX:inst|out[10]       ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.781      ; 1.099      ;
+; 0.821 ; RegX:inst|out[9]        ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.782      ; 1.103      ;
+; 0.826 ; RegX:inst|out[11]       ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.780      ; 1.106      ;
+; 0.997 ; RegX:inst|out[12]       ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.783      ; 1.280      ;
+; 0.999 ; RegX:inst|out[14]       ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.781      ; 1.280      ;
+; 1.125 ; RegX:inst|out[2]        ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.810      ; 1.435      ;
+; 1.126 ; RegX:inst|out[6]        ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.809      ; 1.435      ;
+; 1.130 ; RegX:inst|out[1]        ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.804      ; 1.434      ;
+; 1.164 ; RegX:inst|out[5]        ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.806      ; 1.470      ;
+; 1.240 ; RegX:inst|out[15]       ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.776      ; 1.516      ;
+; 1.354 ; RegX:inst|out[7]        ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.804      ; 1.658      ;
+; 1.360 ; RegX:inst|out[8]        ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.806      ; 1.666      ;
+; 1.609 ; controller:inst4|ps.100 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.524      ; 1.633      ;
+; 1.645 ; controller:inst4|ps.100 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.521      ; 1.666      ;
+; 1.671 ; RegX:inst|out[3]        ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.805      ; 1.976      ;
+; 1.724 ; controller:inst4|ps.100 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.491      ; 1.715      ;
+; 1.778 ; controller:inst4|ps.100 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.525      ; 1.803      ;
+; 1.804 ; counter:inst2|temp[2]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.846      ; 2.150      ;
+; 1.808 ; counter:inst2|temp[0]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.809      ; 2.117      ;
+; 1.826 ; RegX:inst|out[0]        ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.808      ; 2.134      ;
+; 1.887 ; controller:inst4|ps.101 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.524      ; 1.911      ;
+; 1.909 ; controller:inst4|ps.101 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.521      ; 1.930      ;
+; 1.944 ; counter:inst2|temp[0]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.849      ; 2.293      ;
+; 1.962 ; counter:inst2|temp[1]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.801      ; 2.263      ;
+; 1.977 ; controller:inst4|ps.101 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.525      ; 2.002      ;
+; 1.978 ; counter:inst2|temp[2]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.801      ; 2.279      ;
+; 2.000 ; counter:inst2|temp[1]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.846      ; 2.346      ;
+; 2.002 ; controller:inst4|ps.101 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.491      ; 1.993      ;
+; 2.014 ; counter:inst2|temp[0]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.807      ; 2.321      ;
+; 2.020 ; controller:inst4|ps.101 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.489      ; 2.009      ;
+; 2.026 ; controller:inst4|ps.101 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.490      ; 2.016      ;
+; 2.029 ; controller:inst4|ps.100 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.525      ; 2.054      ;
+; 2.033 ; controller:inst4|ps.101 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.488      ; 2.021      ;
+; 2.038 ; counter:inst2|temp[0]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.803      ; 2.341      ;
+; 2.040 ; counter:inst2|temp[2]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.806      ; 2.346      ;
+; 2.070 ; counter:inst2|temp[1]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.804      ; 2.374      ;
+; 2.073 ; RegX:inst|out[13]       ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.809      ; 2.382      ;
+; 2.094 ; counter:inst2|temp[1]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.800      ; 2.394      ;
+; 2.122 ; counter:inst2|temp[2]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.800      ; 2.422      ;
+; 2.123 ; controller:inst4|ps.101 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.520      ; 2.143      ;
+; 2.123 ; controller:inst4|ps.101 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.523      ; 2.146      ;
+; 2.147 ; controller:inst4|ps.101 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.565      ; 2.212      ;
+; 2.175 ; controller:inst4|ps.100 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.565      ; 2.240      ;
+; 2.195 ; controller:inst4|ps.101 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.491      ; 2.186      ;
+; 2.205 ; controller:inst4|ps.101 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.489      ; 2.194      ;
+; 2.242 ; controller:inst4|ps.101 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.519      ; 2.261      ;
+; 2.253 ; controller:inst4|ps.100 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.523      ; 2.276      ;
+; 2.262 ; counter:inst2|temp[0]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.803      ; 2.565      ;
+; 2.263 ; counter:inst2|temp[0]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.805      ; 2.568      ;
+; 2.266 ; controller:inst4|ps.101 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.525      ; 2.291      ;
+; 2.277 ; controller:inst4|ps.100 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.519      ; 2.296      ;
+; 2.299 ; controller:inst4|ps.100 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.489      ; 2.288      ;
+; 2.299 ; controller:inst4|ps.100 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.490      ; 2.289      ;
+; 2.305 ; controller:inst4|ps.100 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.488      ; 2.293      ;
+; 2.318 ; counter:inst2|temp[1]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.800      ; 2.618      ;
+; 2.319 ; controller:inst4|ps.100 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.520      ; 2.339      ;
+; 2.324 ; counter:inst2|temp[1]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.802      ; 2.626      ;
+; 2.346 ; counter:inst2|temp[2]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.800      ; 2.646      ;
+; 2.453 ; counter:inst2|temp[2]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.802      ; 2.755      ;
+; 2.458 ; counter:inst2|temp[2]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.804      ; 2.762      ;
+; 2.466 ; controller:inst4|ps.101 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.519      ; 2.485      ;
+; 2.476 ; controller:inst4|ps.100 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.489      ; 2.465      ;
+; 2.479 ; controller:inst4|ps.100 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.491      ; 2.470      ;
+; 2.486 ; counter:inst2|temp[0]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.804      ; 2.790      ;
+; 2.501 ; controller:inst4|ps.100 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.519      ; 2.520      ;
+; 2.512 ; controller:inst4|ps.100 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.521      ; 2.533      ;
+; 2.749 ; controller:inst4|ps.101 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.521      ; 2.770      ;
++-------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[10]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[10]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[11]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[11]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[12]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[12]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[13]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[13]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[14]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[14]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[15]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[15]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[7]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[7]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[8]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[8]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[9]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[9]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; controller:inst4|ps.000 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; controller:inst4|ps.000 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; controller:inst4|ps.001 ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'controller:inst4|ps.011'                                                                          ;
++-------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                           ;
++-------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[0]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[0]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[10]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[10]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[11]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[11]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[12]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[12]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[13]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[13]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[14]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[14]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[15]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[15]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[1]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[1]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[2]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[2]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[3]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[3]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[4]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[4]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[5]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[5]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[6]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[6]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[7]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[7]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[8]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[8]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[9]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[9]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[0]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[0]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[10]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[10]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[11]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[11]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[12]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[12]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[13]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[13]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[14]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[14]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Rise       ; inst16|out[15]~4|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Rise       ; inst16|out[15]~4|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[1]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[1]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[2]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[2]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[3]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[3]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[4]|datac              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[4]|datac              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[5]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[5]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[6]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[6]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[7]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[7]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[8]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[8]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[9]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[9]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Rise       ; inst4|ps.011|regout              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Rise       ; inst4|ps.011|regout              ;
++-------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; start     ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+; x[*]      ; clock      ; 4.313 ; 4.313 ; Rise       ; clock           ;
+;  x[0]     ; clock      ; 3.993 ; 3.993 ; Rise       ; clock           ;
+;  x[1]     ; clock      ; 4.271 ; 4.271 ; Rise       ; clock           ;
+;  x[2]     ; clock      ; 4.215 ; 4.215 ; Rise       ; clock           ;
+;  x[3]     ; clock      ; 4.004 ; 4.004 ; Rise       ; clock           ;
+;  x[4]     ; clock      ; 3.976 ; 3.976 ; Rise       ; clock           ;
+;  x[5]     ; clock      ; 4.220 ; 4.220 ; Rise       ; clock           ;
+;  x[6]     ; clock      ; 4.208 ; 4.208 ; Rise       ; clock           ;
+;  x[7]     ; clock      ; 4.207 ; 4.207 ; Rise       ; clock           ;
+;  x[8]     ; clock      ; 4.176 ; 4.176 ; Rise       ; clock           ;
+;  x[9]     ; clock      ; 4.313 ; 4.313 ; Rise       ; clock           ;
+;  x[10]    ; clock      ; 4.223 ; 4.223 ; Rise       ; clock           ;
+;  x[11]    ; clock      ; 3.996 ; 3.996 ; Rise       ; clock           ;
+;  x[12]    ; clock      ; 3.969 ; 3.969 ; Rise       ; clock           ;
+;  x[13]    ; clock      ; 4.054 ; 4.054 ; Rise       ; clock           ;
+;  x[14]    ; clock      ; 4.234 ; 4.234 ; Rise       ; clock           ;
+;  x[15]    ; clock      ; 4.084 ; 4.084 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; start     ; clock      ; -3.624 ; -3.624 ; Rise       ; clock           ;
+; x[*]      ; clock      ; -3.739 ; -3.739 ; Rise       ; clock           ;
+;  x[0]     ; clock      ; -3.763 ; -3.763 ; Rise       ; clock           ;
+;  x[1]     ; clock      ; -4.041 ; -4.041 ; Rise       ; clock           ;
+;  x[2]     ; clock      ; -3.985 ; -3.985 ; Rise       ; clock           ;
+;  x[3]     ; clock      ; -3.774 ; -3.774 ; Rise       ; clock           ;
+;  x[4]     ; clock      ; -3.746 ; -3.746 ; Rise       ; clock           ;
+;  x[5]     ; clock      ; -3.990 ; -3.990 ; Rise       ; clock           ;
+;  x[6]     ; clock      ; -3.978 ; -3.978 ; Rise       ; clock           ;
+;  x[7]     ; clock      ; -3.977 ; -3.977 ; Rise       ; clock           ;
+;  x[8]     ; clock      ; -3.946 ; -3.946 ; Rise       ; clock           ;
+;  x[9]     ; clock      ; -4.083 ; -4.083 ; Rise       ; clock           ;
+;  x[10]    ; clock      ; -3.993 ; -3.993 ; Rise       ; clock           ;
+;  x[11]    ; clock      ; -3.766 ; -3.766 ; Rise       ; clock           ;
+;  x[12]    ; clock      ; -3.739 ; -3.739 ; Rise       ; clock           ;
+;  x[13]    ; clock      ; -3.824 ; -3.824 ; Rise       ; clock           ;
+;  x[14]    ; clock      ; -4.004 ; -4.004 ; Rise       ; clock           ;
+;  x[15]    ; clock      ; -3.854 ; -3.854 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cos_X[*]   ; clock      ; 6.955 ; 6.955 ; Rise       ; clock           ;
+;  cos_X[0]  ; clock      ; 6.382 ; 6.382 ; Rise       ; clock           ;
+;  cos_X[1]  ; clock      ; 6.584 ; 6.584 ; Rise       ; clock           ;
+;  cos_X[2]  ; clock      ; 6.414 ; 6.414 ; Rise       ; clock           ;
+;  cos_X[3]  ; clock      ; 6.429 ; 6.429 ; Rise       ; clock           ;
+;  cos_X[4]  ; clock      ; 6.858 ; 6.858 ; Rise       ; clock           ;
+;  cos_X[5]  ; clock      ; 6.347 ; 6.347 ; Rise       ; clock           ;
+;  cos_X[6]  ; clock      ; 6.737 ; 6.737 ; Rise       ; clock           ;
+;  cos_X[7]  ; clock      ; 6.922 ; 6.922 ; Rise       ; clock           ;
+;  cos_X[8]  ; clock      ; 6.955 ; 6.955 ; Rise       ; clock           ;
+;  cos_X[9]  ; clock      ; 6.427 ; 6.427 ; Rise       ; clock           ;
+;  cos_X[10] ; clock      ; 6.639 ; 6.639 ; Rise       ; clock           ;
+;  cos_X[11] ; clock      ; 6.841 ; 6.841 ; Rise       ; clock           ;
+;  cos_X[12] ; clock      ; 6.906 ; 6.906 ; Rise       ; clock           ;
+;  cos_X[13] ; clock      ; 6.783 ; 6.783 ; Rise       ; clock           ;
+;  cos_X[14] ; clock      ; 6.751 ; 6.751 ; Rise       ; clock           ;
+;  cos_X[15] ; clock      ; 6.433 ; 6.433 ; Rise       ; clock           ;
+; done       ; clock      ; 6.693 ; 6.693 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cos_X[*]   ; clock      ; 6.347 ; 6.347 ; Rise       ; clock           ;
+;  cos_X[0]  ; clock      ; 6.382 ; 6.382 ; Rise       ; clock           ;
+;  cos_X[1]  ; clock      ; 6.584 ; 6.584 ; Rise       ; clock           ;
+;  cos_X[2]  ; clock      ; 6.414 ; 6.414 ; Rise       ; clock           ;
+;  cos_X[3]  ; clock      ; 6.429 ; 6.429 ; Rise       ; clock           ;
+;  cos_X[4]  ; clock      ; 6.858 ; 6.858 ; Rise       ; clock           ;
+;  cos_X[5]  ; clock      ; 6.347 ; 6.347 ; Rise       ; clock           ;
+;  cos_X[6]  ; clock      ; 6.737 ; 6.737 ; Rise       ; clock           ;
+;  cos_X[7]  ; clock      ; 6.922 ; 6.922 ; Rise       ; clock           ;
+;  cos_X[8]  ; clock      ; 6.955 ; 6.955 ; Rise       ; clock           ;
+;  cos_X[9]  ; clock      ; 6.427 ; 6.427 ; Rise       ; clock           ;
+;  cos_X[10] ; clock      ; 6.639 ; 6.639 ; Rise       ; clock           ;
+;  cos_X[11] ; clock      ; 6.841 ; 6.841 ; Rise       ; clock           ;
+;  cos_X[12] ; clock      ; 6.906 ; 6.906 ; Rise       ; clock           ;
+;  cos_X[13] ; clock      ; 6.783 ; 6.783 ; Rise       ; clock           ;
+;  cos_X[14] ; clock      ; 6.751 ; 6.751 ; Rise       ; clock           ;
+;  cos_X[15] ; clock      ; 6.433 ; 6.433 ; Rise       ; clock           ;
+; done       ; clock      ; 6.693 ; 6.693 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------+
+; Fast Model Setup Summary                         ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; controller:inst4|ps.011 ; -1.537 ; -13.772       ;
+; clock                   ; -1.167 ; -28.442       ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Fast Model Hold Summary                          ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -0.774 ; -10.934       ;
+; controller:inst4|ps.011 ; 0.770  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary           ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -1.380 ; -59.380       ;
+; controller:inst4|ps.011 ; 0.500  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'controller:inst4|ps.011'                                                                                             ;
++--------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node            ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; -1.537 ; counter:inst2|temp[0]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.214      ; 1.288      ;
+; -1.511 ; counter:inst2|temp[2]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.212      ; 1.260      ;
+; -1.466 ; controller:inst4|ps.101 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.197      ; 1.276      ;
+; -1.449 ; controller:inst4|ps.100 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.201      ; 1.187      ;
+; -1.435 ; counter:inst2|temp[1]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.212      ; 1.184      ;
+; -1.390 ; counter:inst2|temp[2]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.208      ; 1.211      ;
+; -1.368 ; counter:inst2|temp[1]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.208      ; 1.189      ;
+; -1.346 ; controller:inst4|ps.100 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.197      ; 1.156      ;
+; -1.344 ; controller:inst4|ps.101 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.199      ; 1.282      ;
+; -1.328 ; counter:inst2|temp[0]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.210      ; 1.151      ;
+; -1.318 ; controller:inst4|ps.101 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.201      ; 1.056      ;
+; -1.304 ; counter:inst2|temp[2]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.210      ; 1.253      ;
+; -1.247 ; RegX:inst|out[0]        ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.215      ; 0.999      ;
+; -1.228 ; counter:inst2|temp[1]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.210      ; 1.177      ;
+; -1.217 ; controller:inst4|ps.100 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.199      ; 1.155      ;
+; -1.212 ; counter:inst2|temp[0]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.212      ; 1.163      ;
+; -0.967 ; RegX:inst|out[7]        ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.211      ; 0.791      ;
+; -0.934 ; counter:inst2|temp[0]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.211      ; 1.286      ;
+; -0.847 ; controller:inst4|ps.101 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 1.157      ;
+; -0.846 ; RegX:inst|out[8]        ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.213      ; 0.798      ;
+; -0.842 ; controller:inst4|ps.101 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.197      ; 1.180      ;
+; -0.798 ; controller:inst4|ps.100 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.182      ; 1.134      ;
+; -0.780 ; controller:inst4|ps.100 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.198      ; 1.119      ;
+; -0.766 ; counter:inst2|temp[2]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.208      ; 1.115      ;
+; -0.750 ; counter:inst2|temp[1]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.213      ; 1.071      ;
+; -0.746 ; controller:inst4|ps.100 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.178      ; 1.063      ;
+; -0.744 ; counter:inst2|temp[1]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.208      ; 1.093      ;
+; -0.742 ; counter:inst2|temp[2]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.213      ; 1.095      ;
+; -0.738 ; counter:inst2|temp[0]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.215      ; 1.061      ;
+; -0.730 ; counter:inst2|temp[2]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.209      ; 1.080      ;
+; -0.728 ; controller:inst4|ps.100 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 1.038      ;
+; -0.725 ; controller:inst4|ps.100 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.179      ; 1.128      ;
+; -0.724 ; RegX:inst|out[13]       ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.215      ; 1.095      ;
+; -0.722 ; controller:inst4|ps.100 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.197      ; 1.060      ;
+; -0.718 ; controller:inst4|ps.100 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.180      ; 1.049      ;
+; -0.718 ; controller:inst4|ps.101 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 1.060      ;
+; -0.716 ; controller:inst4|ps.100 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.181      ; 1.048      ;
+; -0.704 ; counter:inst2|temp[0]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.210      ; 1.055      ;
+; -0.692 ; counter:inst2|temp[1]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.209      ; 1.042      ;
+; -0.668 ; counter:inst2|temp[2]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.213      ; 0.989      ;
+; -0.666 ; controller:inst4|ps.101 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.198      ; 1.005      ;
+; -0.652 ; controller:inst4|ps.101 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.182      ; 0.988      ;
+; -0.617 ; counter:inst2|temp[0]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.215      ; 0.972      ;
+; -0.602 ; controller:inst4|ps.101 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.178      ; 0.919      ;
+; -0.593 ; controller:inst4|ps.101 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.179      ; 0.996      ;
+; -0.591 ; controller:inst4|ps.100 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 0.933      ;
+; -0.581 ; controller:inst4|ps.101 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.181      ; 0.913      ;
+; -0.578 ; RegX:inst|out[3]        ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.212      ; 0.931      ;
+; -0.576 ; controller:inst4|ps.101 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.180      ; 0.907      ;
+; -0.574 ; controller:inst4|ps.101 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.182      ; 0.910      ;
+; -0.573 ; controller:inst4|ps.101 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 0.931      ;
+; -0.539 ; controller:inst4|ps.101 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.201      ; 0.879      ;
+; -0.520 ; controller:inst4|ps.101 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.199      ; 0.875      ;
+; -0.512 ; controller:inst4|ps.100 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 0.870      ;
+; -0.451 ; controller:inst4|ps.100 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.182      ; 0.787      ;
+; -0.417 ; controller:inst4|ps.100 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.201      ; 0.757      ;
+; -0.409 ; controller:inst4|ps.100 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.199      ; 0.764      ;
+; -0.375 ; RegX:inst|out[15]       ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.196      ; 0.725      ;
+; -0.343 ; RegX:inst|out[1]        ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.211      ; 0.695      ;
+; -0.341 ; RegX:inst|out[6]        ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.215      ; 0.695      ;
+; -0.339 ; RegX:inst|out[2]        ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.216      ; 0.695      ;
+; -0.335 ; RegX:inst|out[5]        ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.213      ; 0.704      ;
+; -0.266 ; RegX:inst|out[12]       ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.202      ; 0.622      ;
+; -0.207 ; RegX:inst|out[11]       ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.198      ; 0.544      ;
+; -0.199 ; RegX:inst|out[14]       ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.199      ; 0.622      ;
+; -0.188 ; RegX:inst|out[9]        ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.201      ; 0.540      ;
+; -0.187 ; RegX:inst|out[10]       ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.200      ; 0.538      ;
+; -0.162 ; RegX:inst|out[4]        ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; 0.500        ; 0.222      ; 0.492      ;
++--------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                               ;
++--------+-------------------------+---------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node             ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------------------+-------------------------+-------------+--------------+------------+------------+
+; -1.167 ; controller:inst4|ps.110 ; RegR:inst14|out[15] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.212      ;
+; -1.155 ; MUX:inst16|out[7]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.474      ;
+; -1.150 ; MUX:inst16|out[2]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.464      ;
+; -1.149 ; MUX:inst16|out[0]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.464      ;
+; -1.149 ; MUX:inst16|out[4]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.463      ;
+; -1.149 ; MUX:inst16|out[6]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.464      ;
+; -1.148 ; MUX:inst16|out[8]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.465      ;
+; -1.147 ; MUX:inst16|out[3]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.214     ; 1.465      ;
+; -1.147 ; MUX:inst16|out[5]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.464      ;
+; -1.145 ; MUX:inst16|out[1]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.464      ;
+; -1.126 ; MUX:inst16|out[10]      ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.196     ; 1.462      ;
+; -1.125 ; MUX:inst16|out[12]      ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.459      ;
+; -1.124 ; MUX:inst16|out[9]       ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.197     ; 1.459      ;
+; -1.122 ; MUX:inst16|out[11]      ; RegT:inst15|out[4]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.194     ; 1.460      ;
+; -1.102 ; MUX:inst16|out[7]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.421      ;
+; -1.097 ; MUX:inst16|out[2]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.411      ;
+; -1.097 ; MUX:inst16|out[13]      ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.411      ;
+; -1.096 ; MUX:inst16|out[0]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.411      ;
+; -1.096 ; MUX:inst16|out[4]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.410      ;
+; -1.096 ; MUX:inst16|out[6]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.411      ;
+; -1.095 ; MUX:inst16|out[8]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.412      ;
+; -1.094 ; MUX:inst16|out[3]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.214     ; 1.412      ;
+; -1.094 ; MUX:inst16|out[5]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.411      ;
+; -1.092 ; MUX:inst16|out[1]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.411      ;
+; -1.089 ; MUX:inst16|out[7]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.408      ;
+; -1.084 ; MUX:inst16|out[2]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.398      ;
+; -1.083 ; MUX:inst16|out[0]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.398      ;
+; -1.083 ; MUX:inst16|out[4]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.397      ;
+; -1.083 ; MUX:inst16|out[6]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.398      ;
+; -1.082 ; MUX:inst16|out[8]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.399      ;
+; -1.081 ; MUX:inst16|out[3]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.214     ; 1.399      ;
+; -1.081 ; MUX:inst16|out[5]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.398      ;
+; -1.079 ; MUX:inst16|out[1]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.398      ;
+; -1.074 ; counter:inst2|temp[0]   ; RegR:inst14|out[15] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.119      ;
+; -1.073 ; controller:inst4|ps.110 ; RegR:inst14|out[14] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.118      ;
+; -1.073 ; MUX:inst16|out[10]      ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.196     ; 1.409      ;
+; -1.072 ; MUX:inst16|out[12]      ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.406      ;
+; -1.072 ; MUX:inst16|out[15]      ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.406      ;
+; -1.071 ; MUX:inst16|out[9]       ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.197     ; 1.406      ;
+; -1.070 ; MUX:inst16|out[14]      ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.195     ; 1.407      ;
+; -1.069 ; MUX:inst16|out[11]      ; RegT:inst15|out[10] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.194     ; 1.407      ;
+; -1.060 ; MUX:inst16|out[10]      ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.196     ; 1.396      ;
+; -1.058 ; MUX:inst16|out[9]       ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.197     ; 1.393      ;
+; -1.056 ; MUX:inst16|out[11]      ; RegT:inst15|out[3]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.194     ; 1.394      ;
+; -1.038 ; controller:inst4|ps.110 ; RegR:inst14|out[13] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.083      ;
+; -1.016 ; RegT:inst15|out[14]     ; RegR:inst14|out[15] ; clock                   ; clock       ; 1.000        ; 0.016      ; 2.064      ;
+; -1.016 ; RegT:inst15|out[1]      ; RegR:inst14|out[15] ; clock                   ; clock       ; 1.000        ; 0.016      ; 2.064      ;
+; -1.012 ; MUX:inst16|out[7]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.331      ;
+; -1.007 ; MUX:inst16|out[2]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.321      ;
+; -1.007 ; MUX:inst16|out[13]      ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.321      ;
+; -1.006 ; MUX:inst16|out[0]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.321      ;
+; -1.006 ; MUX:inst16|out[4]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.320      ;
+; -1.006 ; MUX:inst16|out[6]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.321      ;
+; -1.005 ; MUX:inst16|out[8]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.322      ;
+; -1.004 ; MUX:inst16|out[3]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.214     ; 1.322      ;
+; -1.004 ; MUX:inst16|out[5]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.321      ;
+; -1.003 ; controller:inst4|ps.110 ; RegR:inst14|out[12] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.048      ;
+; -1.002 ; MUX:inst16|out[1]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.321      ;
+; -0.998 ; MUX:inst16|out[7]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.317      ;
+; -0.998 ; MUX:inst16|out[7]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.317      ;
+; -0.993 ; MUX:inst16|out[2]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.307      ;
+; -0.993 ; MUX:inst16|out[13]      ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.307      ;
+; -0.993 ; MUX:inst16|out[2]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.307      ;
+; -0.993 ; MUX:inst16|out[13]      ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.307      ;
+; -0.992 ; MUX:inst16|out[0]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.307      ;
+; -0.992 ; MUX:inst16|out[4]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.306      ;
+; -0.992 ; MUX:inst16|out[6]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.307      ;
+; -0.992 ; MUX:inst16|out[0]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.307      ;
+; -0.992 ; MUX:inst16|out[4]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.218     ; 1.306      ;
+; -0.992 ; MUX:inst16|out[6]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.217     ; 1.307      ;
+; -0.991 ; MUX:inst16|out[8]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.308      ;
+; -0.991 ; MUX:inst16|out[8]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.308      ;
+; -0.990 ; MUX:inst16|out[3]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.214     ; 1.308      ;
+; -0.990 ; MUX:inst16|out[5]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.307      ;
+; -0.990 ; MUX:inst16|out[3]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.214     ; 1.308      ;
+; -0.990 ; MUX:inst16|out[5]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.215     ; 1.307      ;
+; -0.988 ; MUX:inst16|out[1]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.307      ;
+; -0.988 ; MUX:inst16|out[1]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.213     ; 1.307      ;
+; -0.983 ; MUX:inst16|out[10]      ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.196     ; 1.319      ;
+; -0.982 ; MUX:inst16|out[12]      ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.316      ;
+; -0.981 ; MUX:inst16|out[9]       ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.197     ; 1.316      ;
+; -0.980 ; counter:inst2|temp[0]   ; RegR:inst14|out[14] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.025      ;
+; -0.980 ; MUX:inst16|out[14]      ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.195     ; 1.317      ;
+; -0.979 ; MUX:inst16|out[11]      ; RegT:inst15|out[6]  ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.194     ; 1.317      ;
+; -0.969 ; MUX:inst16|out[10]      ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.196     ; 1.305      ;
+; -0.969 ; MUX:inst16|out[10]      ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.196     ; 1.305      ;
+; -0.968 ; controller:inst4|ps.110 ; RegR:inst14|out[11] ; clock                   ; clock       ; 1.000        ; 0.013      ; 2.013      ;
+; -0.968 ; MUX:inst16|out[12]      ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.302      ;
+; -0.968 ; MUX:inst16|out[15]      ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.302      ;
+; -0.968 ; MUX:inst16|out[12]      ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.302      ;
+; -0.968 ; MUX:inst16|out[15]      ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.198     ; 1.302      ;
+; -0.967 ; MUX:inst16|out[9]       ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.197     ; 1.302      ;
+; -0.967 ; MUX:inst16|out[9]       ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.197     ; 1.302      ;
+; -0.966 ; MUX:inst16|out[14]      ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.195     ; 1.303      ;
+; -0.966 ; MUX:inst16|out[14]      ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.195     ; 1.303      ;
+; -0.965 ; MUX:inst16|out[11]      ; RegT:inst15|out[14] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.194     ; 1.303      ;
+; -0.965 ; MUX:inst16|out[11]      ; RegT:inst15|out[15] ; controller:inst4|ps.011 ; clock       ; 0.500        ; -0.194     ; 1.303      ;
+; -0.945 ; counter:inst2|temp[0]   ; RegR:inst14|out[13] ; clock                   ; clock       ; 1.000        ; 0.013      ; 1.990      ;
+; -0.933 ; controller:inst4|ps.110 ; RegR:inst14|out[10] ; clock                   ; clock       ; 1.000        ; 0.013      ; 1.978      ;
+; -0.922 ; RegT:inst15|out[1]      ; RegR:inst14|out[14] ; clock                   ; clock       ; 1.000        ; 0.016      ; 1.970      ;
++--------+-------------------------+---------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                    ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -0.774 ; controller:inst4|ps.011 ; controller:inst4|ps.100 ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.426      ; 0.945      ;
+; -0.650 ; controller:inst4|ps.011 ; RegT:inst15|out[8]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.414      ; 1.057      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[1]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[2]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[3]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[4]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[5]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[6]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[7]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[9]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[10]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[11]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[12]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[13]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[14]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[15]     ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.634 ; controller:inst4|ps.011 ; RegT:inst15|out[0]      ; controller:inst4|ps.011 ; clock       ; 0.000        ; 1.410      ; 1.069      ;
+; -0.274 ; controller:inst4|ps.011 ; controller:inst4|ps.100 ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.426      ; 0.945      ;
+; -0.150 ; controller:inst4|ps.011 ; RegT:inst15|out[8]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.414      ; 1.057      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[1]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[2]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[3]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[4]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[5]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[6]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[7]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[9]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[10]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[11]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[12]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[13]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[14]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[15]     ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; -0.134 ; controller:inst4|ps.011 ; RegT:inst15|out[0]      ; controller:inst4|ps.011 ; clock       ; -0.500       ; 1.410      ; 1.069      ;
+; 0.215  ; counter:inst2|temp[1]   ; counter:inst2|temp[1]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; counter:inst2|temp[2]   ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; controller:inst4|ps.000 ; controller:inst4|ps.000 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; controller:inst4|ps.001 ; controller:inst4|ps.001 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; counter:inst2|temp[0]   ; counter:inst2|temp[0]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.250  ; controller:inst4|ps.001 ; counter:inst2|temp[0]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.402      ;
+; 0.251  ; counter:inst2|temp[0]   ; controller:inst4|ps.011 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.403      ;
+; 0.355  ; RegR:inst14|out[8]      ; RegR:inst14|out[8]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.356  ; RegR:inst14|out[0]      ; RegR:inst14|out[0]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357  ; RegR:inst14|out[7]      ; RegR:inst14|out[7]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; RegR:inst14|out[4]      ; RegR:inst14|out[4]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; RegR:inst14|out[6]      ; RegR:inst14|out[6]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360  ; RegR:inst14|out[9]      ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361  ; RegR:inst14|out[11]     ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; RegR:inst14|out[14]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.366  ; RegR:inst14|out[15]     ; RegR:inst14|out[15]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369  ; RegR:inst14|out[1]      ; RegR:inst14|out[1]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; RegR:inst14|out[3]      ; RegR:inst14|out[3]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371  ; RegR:inst14|out[10]     ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; controller:inst4|ps.000 ; controller:inst4|ps.001 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372  ; RegR:inst14|out[12]     ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; RegR:inst14|out[13]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374  ; controller:inst4|ps.001 ; controller:inst4|ps.010 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.438  ; controller:inst4|ps.101 ; controller:inst4|ps.110 ; clock                   ; clock       ; 0.000        ; -0.013     ; 0.577      ;
+; 0.452  ; RegR:inst14|out[2]      ; RegR:inst14|out[2]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.604      ;
+; 0.452  ; RegR:inst14|out[5]      ; RegR:inst14|out[5]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.604      ;
+; 0.452  ; counter:inst2|temp[0]   ; counter:inst2|temp[1]   ; clock                   ; clock       ; 0.000        ; 0.002      ; 0.606      ;
+; 0.452  ; counter:inst2|temp[0]   ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.002      ; 0.606      ;
+; 0.459  ; controller:inst4|ps.110 ; counter:inst2|temp[0]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.611      ;
+; 0.493  ; RegR:inst14|out[8]      ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.494  ; RegR:inst14|out[0]      ; RegR:inst14|out[1]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495  ; RegR:inst14|out[7]      ; RegR:inst14|out[8]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496  ; RegR:inst14|out[4]      ; RegR:inst14|out[5]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.498  ; RegR:inst14|out[9]      ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499  ; RegR:inst14|out[11]     ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.506  ; controller:inst4|ps.110 ; controller:inst4|ps.000 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.658      ;
+; 0.509  ; RegR:inst14|out[3]      ; RegR:inst14|out[4]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509  ; RegR:inst14|out[1]      ; RegR:inst14|out[2]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511  ; RegR:inst14|out[10]     ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512  ; RegR:inst14|out[13]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; RegR:inst14|out[12]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.664      ;
+; 0.528  ; RegR:inst14|out[8]      ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.680      ;
+; 0.529  ; RegR:inst14|out[0]      ; RegR:inst14|out[2]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.681      ;
+; 0.530  ; RegR:inst14|out[7]      ; RegR:inst14|out[9]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531  ; RegR:inst14|out[4]      ; RegR:inst14|out[6]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.533  ; RegR:inst14|out[9]      ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534  ; RegR:inst14|out[11]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.686      ;
+; 0.544  ; RegR:inst14|out[1]      ; RegR:inst14|out[3]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544  ; RegR:inst14|out[3]      ; RegR:inst14|out[5]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.546  ; RegR:inst14|out[10]     ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547  ; RegR:inst14|out[12]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549  ; RegR:inst14|out[6]      ; RegR:inst14|out[7]      ; clock                   ; clock       ; 0.000        ; -0.006     ; 0.695      ;
+; 0.551  ; counter:inst2|temp[1]   ; counter:inst2|temp[2]   ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.703      ;
+; 0.554  ; controller:inst4|ps.010 ; controller:inst4|ps.011 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.706      ;
+; 0.554  ; RegR:inst14|out[14]     ; RegR:inst14|out[15]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.706      ;
+; 0.557  ; controller:inst4|ps.110 ; controller:inst4|ps.011 ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.709      ;
+; 0.563  ; RegR:inst14|out[8]      ; RegR:inst14|out[11]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.564  ; RegR:inst14|out[0]      ; RegR:inst14|out[3]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.716      ;
+; 0.565  ; RegR:inst14|out[7]      ; RegR:inst14|out[10]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.717      ;
+; 0.568  ; RegR:inst14|out[9]      ; RegR:inst14|out[12]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569  ; RegR:inst14|out[11]     ; RegR:inst14|out[14]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.721      ;
+; 0.579  ; RegR:inst14|out[1]      ; RegR:inst14|out[4]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579  ; RegR:inst14|out[3]      ; RegR:inst14|out[6]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.581  ; RegR:inst14|out[10]     ; RegR:inst14|out[13]     ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.584  ; RegR:inst14|out[6]      ; RegR:inst14|out[8]      ; clock                   ; clock       ; 0.000        ; -0.006     ; 0.730      ;
+; 0.592  ; RegR:inst14|out[5]      ; RegR:inst14|out[6]      ; clock                   ; clock       ; 0.000        ; 0.000      ; 0.744      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'controller:inst4|ps.011'                                                                                             ;
++-------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node            ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+; 0.770 ; RegX:inst|out[4]        ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.222      ; 0.492      ;
+; 0.838 ; RegX:inst|out[10]       ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.200      ; 0.538      ;
+; 0.839 ; RegX:inst|out[9]        ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.201      ; 0.540      ;
+; 0.846 ; RegX:inst|out[11]       ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.198      ; 0.544      ;
+; 0.920 ; RegX:inst|out[12]       ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 0.622      ;
+; 0.923 ; RegX:inst|out[14]       ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.199      ; 0.622      ;
+; 0.979 ; RegX:inst|out[2]        ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.216      ; 0.695      ;
+; 0.980 ; RegX:inst|out[6]        ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.215      ; 0.695      ;
+; 0.984 ; RegX:inst|out[1]        ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.211      ; 0.695      ;
+; 0.991 ; RegX:inst|out[5]        ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.213      ; 0.704      ;
+; 1.029 ; RegX:inst|out[15]       ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.196      ; 0.725      ;
+; 1.056 ; controller:inst4|ps.100 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.201      ; 0.757      ;
+; 1.065 ; controller:inst4|ps.100 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.199      ; 0.764      ;
+; 1.080 ; RegX:inst|out[7]        ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.211      ; 0.791      ;
+; 1.085 ; RegX:inst|out[8]        ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.213      ; 0.798      ;
+; 1.105 ; controller:inst4|ps.100 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.182      ; 0.787      ;
+; 1.168 ; controller:inst4|ps.100 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 0.870      ;
+; 1.176 ; controller:inst4|ps.101 ; MUX:inst16|out[5]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.199      ; 0.875      ;
+; 1.178 ; controller:inst4|ps.101 ; MUX:inst16|out[6]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.201      ; 0.879      ;
+; 1.219 ; RegX:inst|out[3]        ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.212      ; 0.931      ;
+; 1.227 ; controller:inst4|ps.101 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.180      ; 0.907      ;
+; 1.228 ; controller:inst4|ps.101 ; MUX:inst16|out[15] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.182      ; 0.910      ;
+; 1.229 ; controller:inst4|ps.101 ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 0.931      ;
+; 1.231 ; controller:inst4|ps.100 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 0.933      ;
+; 1.232 ; controller:inst4|ps.101 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.181      ; 0.913      ;
+; 1.241 ; controller:inst4|ps.101 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.178      ; 0.919      ;
+; 1.257 ; counter:inst2|temp[0]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.215      ; 0.972      ;
+; 1.276 ; counter:inst2|temp[2]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.213      ; 0.989      ;
+; 1.284 ; RegX:inst|out[0]        ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.215      ; 0.999      ;
+; 1.290 ; controller:inst4|ps.101 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.198      ; 0.988      ;
+; 1.306 ; controller:inst4|ps.101 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.182      ; 0.988      ;
+; 1.306 ; controller:inst4|ps.101 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.201      ; 1.007      ;
+; 1.317 ; controller:inst4|ps.101 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.179      ; 0.996      ;
+; 1.327 ; controller:inst4|ps.101 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 1.029      ;
+; 1.328 ; controller:inst4|ps.100 ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 1.030      ;
+; 1.333 ; counter:inst2|temp[1]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.209      ; 1.042      ;
+; 1.345 ; counter:inst2|temp[0]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.210      ; 1.055      ;
+; 1.346 ; counter:inst2|temp[0]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.215      ; 1.061      ;
+; 1.355 ; controller:inst4|ps.101 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.197      ; 1.052      ;
+; 1.356 ; controller:inst4|ps.100 ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.197      ; 1.053      ;
+; 1.357 ; controller:inst4|ps.100 ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.201      ; 1.058      ;
+; 1.358 ; controller:inst4|ps.101 ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.202      ; 1.060      ;
+; 1.358 ; counter:inst2|temp[1]   ; MUX:inst16|out[4]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.213      ; 1.071      ;
+; 1.367 ; controller:inst4|ps.100 ; MUX:inst16|out[9]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.181      ; 1.048      ;
+; 1.367 ; controller:inst4|ps.100 ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.198      ; 1.065      ;
+; 1.367 ; counter:inst2|temp[0]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.214      ; 1.081      ;
+; 1.369 ; controller:inst4|ps.100 ; MUX:inst16|out[10] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.180      ; 1.049      ;
+; 1.371 ; counter:inst2|temp[2]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.209      ; 1.080      ;
+; 1.379 ; counter:inst2|temp[1]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.212      ; 1.091      ;
+; 1.380 ; RegX:inst|out[13]       ; MUX:inst16|out[13] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.215      ; 1.095      ;
+; 1.382 ; counter:inst2|temp[2]   ; MUX:inst16|out[2]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.213      ; 1.095      ;
+; 1.385 ; controller:inst4|ps.100 ; MUX:inst16|out[11] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.178      ; 1.063      ;
+; 1.385 ; counter:inst2|temp[1]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.208      ; 1.093      ;
+; 1.407 ; counter:inst2|temp[2]   ; MUX:inst16|out[1]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.208      ; 1.115      ;
+; 1.441 ; counter:inst2|temp[0]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.210      ; 1.151      ;
+; 1.449 ; controller:inst4|ps.100 ; MUX:inst16|out[14] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.179      ; 1.128      ;
+; 1.451 ; counter:inst2|temp[0]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.212      ; 1.163      ;
+; 1.451 ; controller:inst4|ps.101 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.197      ; 1.148      ;
+; 1.452 ; controller:inst4|ps.100 ; MUX:inst16|out[12] ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.182      ; 1.134      ;
+; 1.452 ; controller:inst4|ps.100 ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.197      ; 1.149      ;
+; 1.456 ; controller:inst4|ps.100 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.199      ; 1.155      ;
+; 1.467 ; counter:inst2|temp[1]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.210      ; 1.177      ;
+; 1.481 ; counter:inst2|temp[1]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.208      ; 1.189      ;
+; 1.503 ; counter:inst2|temp[2]   ; MUX:inst16|out[7]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.208      ; 1.211      ;
+; 1.543 ; counter:inst2|temp[2]   ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.210      ; 1.253      ;
+; 1.548 ; counter:inst2|temp[2]   ; MUX:inst16|out[0]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.212      ; 1.260      ;
+; 1.575 ; counter:inst2|temp[0]   ; MUX:inst16|out[3]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.211      ; 1.286      ;
+; 1.583 ; controller:inst4|ps.101 ; MUX:inst16|out[8]  ; clock        ; controller:inst4|ps.011 ; -0.500       ; 0.199      ; 1.282      ;
++-------+-------------------------+--------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegR:inst14|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegR:inst14|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegT:inst15|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegT:inst15|out[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[10]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[10]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[11]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[11]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[12]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[12]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[13]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[13]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[14]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[14]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[15]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[15]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[7]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[7]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[8]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[8]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegX:inst|out[9]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegX:inst|out[9]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; controller:inst4|ps.000 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; controller:inst4|ps.000 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; controller:inst4|ps.001 ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'controller:inst4|ps.011'                                                                          ;
++-------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                           ;
++-------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[0]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[0]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[10]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[10]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[11]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[11]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[12]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[12]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[13]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[13]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[14]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[14]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[15]               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[15]               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[1]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[1]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[2]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[2]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[3]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[3]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[4]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[4]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[5]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[5]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[6]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[6]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[7]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[7]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[8]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[8]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[9]                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; MUX:inst16|out[9]                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[0]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[0]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[10]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[10]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[11]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[11]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[12]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[12]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[13]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[13]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[14]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[14]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[15]~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Rise       ; inst16|out[15]~4|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Rise       ; inst16|out[15]~4|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[1]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[1]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[2]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[2]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[3]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[3]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[4]|datac              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[4]|datac              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[5]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[5]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[6]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[6]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[7]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[7]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[8]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[8]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Fall       ; inst16|out[9]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Fall       ; inst16|out[9]|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controller:inst4|ps.011 ; Rise       ; inst4|ps.011|regout              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controller:inst4|ps.011 ; Rise       ; inst4|ps.011|regout              ;
++-------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; start     ; clock      ; 2.139 ; 2.139 ; Rise       ; clock           ;
+; x[*]      ; clock      ; 2.392 ; 2.392 ; Rise       ; clock           ;
+;  x[0]     ; clock      ; 2.224 ; 2.224 ; Rise       ; clock           ;
+;  x[1]     ; clock      ; 2.361 ; 2.361 ; Rise       ; clock           ;
+;  x[2]     ; clock      ; 2.325 ; 2.325 ; Rise       ; clock           ;
+;  x[3]     ; clock      ; 2.255 ; 2.255 ; Rise       ; clock           ;
+;  x[4]     ; clock      ; 2.211 ; 2.211 ; Rise       ; clock           ;
+;  x[5]     ; clock      ; 2.353 ; 2.353 ; Rise       ; clock           ;
+;  x[6]     ; clock      ; 2.314 ; 2.314 ; Rise       ; clock           ;
+;  x[7]     ; clock      ; 2.320 ; 2.320 ; Rise       ; clock           ;
+;  x[8]     ; clock      ; 2.314 ; 2.314 ; Rise       ; clock           ;
+;  x[9]     ; clock      ; 2.392 ; 2.392 ; Rise       ; clock           ;
+;  x[10]    ; clock      ; 2.328 ; 2.328 ; Rise       ; clock           ;
+;  x[11]    ; clock      ; 2.229 ; 2.229 ; Rise       ; clock           ;
+;  x[12]    ; clock      ; 2.207 ; 2.207 ; Rise       ; clock           ;
+;  x[13]    ; clock      ; 2.294 ; 2.294 ; Rise       ; clock           ;
+;  x[14]    ; clock      ; 2.335 ; 2.335 ; Rise       ; clock           ;
+;  x[15]    ; clock      ; 2.310 ; 2.310 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; start     ; clock      ; -2.014 ; -2.014 ; Rise       ; clock           ;
+; x[*]      ; clock      ; -2.087 ; -2.087 ; Rise       ; clock           ;
+;  x[0]     ; clock      ; -2.104 ; -2.104 ; Rise       ; clock           ;
+;  x[1]     ; clock      ; -2.241 ; -2.241 ; Rise       ; clock           ;
+;  x[2]     ; clock      ; -2.205 ; -2.205 ; Rise       ; clock           ;
+;  x[3]     ; clock      ; -2.135 ; -2.135 ; Rise       ; clock           ;
+;  x[4]     ; clock      ; -2.091 ; -2.091 ; Rise       ; clock           ;
+;  x[5]     ; clock      ; -2.233 ; -2.233 ; Rise       ; clock           ;
+;  x[6]     ; clock      ; -2.194 ; -2.194 ; Rise       ; clock           ;
+;  x[7]     ; clock      ; -2.200 ; -2.200 ; Rise       ; clock           ;
+;  x[8]     ; clock      ; -2.194 ; -2.194 ; Rise       ; clock           ;
+;  x[9]     ; clock      ; -2.272 ; -2.272 ; Rise       ; clock           ;
+;  x[10]    ; clock      ; -2.208 ; -2.208 ; Rise       ; clock           ;
+;  x[11]    ; clock      ; -2.109 ; -2.109 ; Rise       ; clock           ;
+;  x[12]    ; clock      ; -2.087 ; -2.087 ; Rise       ; clock           ;
+;  x[13]    ; clock      ; -2.174 ; -2.174 ; Rise       ; clock           ;
+;  x[14]    ; clock      ; -2.215 ; -2.215 ; Rise       ; clock           ;
+;  x[15]    ; clock      ; -2.190 ; -2.190 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cos_X[*]   ; clock      ; 3.871 ; 3.871 ; Rise       ; clock           ;
+;  cos_X[0]  ; clock      ; 3.520 ; 3.520 ; Rise       ; clock           ;
+;  cos_X[1]  ; clock      ; 3.674 ; 3.674 ; Rise       ; clock           ;
+;  cos_X[2]  ; clock      ; 3.542 ; 3.542 ; Rise       ; clock           ;
+;  cos_X[3]  ; clock      ; 3.552 ; 3.552 ; Rise       ; clock           ;
+;  cos_X[4]  ; clock      ; 3.811 ; 3.811 ; Rise       ; clock           ;
+;  cos_X[5]  ; clock      ; 3.569 ; 3.569 ; Rise       ; clock           ;
+;  cos_X[6]  ; clock      ; 3.699 ; 3.699 ; Rise       ; clock           ;
+;  cos_X[7]  ; clock      ; 3.835 ; 3.835 ; Rise       ; clock           ;
+;  cos_X[8]  ; clock      ; 3.871 ; 3.871 ; Rise       ; clock           ;
+;  cos_X[9]  ; clock      ; 3.552 ; 3.552 ; Rise       ; clock           ;
+;  cos_X[10] ; clock      ; 3.657 ; 3.657 ; Rise       ; clock           ;
+;  cos_X[11] ; clock      ; 3.793 ; 3.793 ; Rise       ; clock           ;
+;  cos_X[12] ; clock      ; 3.832 ; 3.832 ; Rise       ; clock           ;
+;  cos_X[13] ; clock      ; 3.792 ; 3.792 ; Rise       ; clock           ;
+;  cos_X[14] ; clock      ; 3.701 ; 3.701 ; Rise       ; clock           ;
+;  cos_X[15] ; clock      ; 3.554 ; 3.554 ; Rise       ; clock           ;
+; done       ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cos_X[*]   ; clock      ; 3.520 ; 3.520 ; Rise       ; clock           ;
+;  cos_X[0]  ; clock      ; 3.520 ; 3.520 ; Rise       ; clock           ;
+;  cos_X[1]  ; clock      ; 3.674 ; 3.674 ; Rise       ; clock           ;
+;  cos_X[2]  ; clock      ; 3.542 ; 3.542 ; Rise       ; clock           ;
+;  cos_X[3]  ; clock      ; 3.552 ; 3.552 ; Rise       ; clock           ;
+;  cos_X[4]  ; clock      ; 3.811 ; 3.811 ; Rise       ; clock           ;
+;  cos_X[5]  ; clock      ; 3.569 ; 3.569 ; Rise       ; clock           ;
+;  cos_X[6]  ; clock      ; 3.699 ; 3.699 ; Rise       ; clock           ;
+;  cos_X[7]  ; clock      ; 3.835 ; 3.835 ; Rise       ; clock           ;
+;  cos_X[8]  ; clock      ; 3.871 ; 3.871 ; Rise       ; clock           ;
+;  cos_X[9]  ; clock      ; 3.552 ; 3.552 ; Rise       ; clock           ;
+;  cos_X[10] ; clock      ; 3.657 ; 3.657 ; Rise       ; clock           ;
+;  cos_X[11] ; clock      ; 3.793 ; 3.793 ; Rise       ; clock           ;
+;  cos_X[12] ; clock      ; 3.832 ; 3.832 ; Rise       ; clock           ;
+;  cos_X[13] ; clock      ; 3.792 ; 3.792 ; Rise       ; clock           ;
+;  cos_X[14] ; clock      ; 3.701 ; 3.701 ; Rise       ; clock           ;
+;  cos_X[15] ; clock      ; 3.554 ; 3.554 ; Rise       ; clock           ;
+; done       ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                      ;
++--------------------------+----------+---------+----------+---------+---------------------+
+; Clock                    ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------+----------+---------+----------+---------+---------------------+
+; Worst-case Slack         ; -5.197   ; -1.179  ; N/A      ; N/A     ; -1.380              ;
+;  clock                   ; -5.197   ; -1.179  ; N/A      ; N/A     ; -1.380              ;
+;  controller:inst4|ps.011 ; -3.763   ; 0.614   ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS          ; -178.538 ; -12.757 ; 0.0      ; 0.0     ; -59.38              ;
+;  clock                   ; -140.284 ; -12.757 ; N/A      ; N/A     ; -59.380             ;
+;  controller:inst4|ps.011 ; -38.254  ; 0.000   ; N/A      ; N/A     ; 0.000               ;
++--------------------------+----------+---------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; start     ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+; x[*]      ; clock      ; 4.313 ; 4.313 ; Rise       ; clock           ;
+;  x[0]     ; clock      ; 3.993 ; 3.993 ; Rise       ; clock           ;
+;  x[1]     ; clock      ; 4.271 ; 4.271 ; Rise       ; clock           ;
+;  x[2]     ; clock      ; 4.215 ; 4.215 ; Rise       ; clock           ;
+;  x[3]     ; clock      ; 4.004 ; 4.004 ; Rise       ; clock           ;
+;  x[4]     ; clock      ; 3.976 ; 3.976 ; Rise       ; clock           ;
+;  x[5]     ; clock      ; 4.220 ; 4.220 ; Rise       ; clock           ;
+;  x[6]     ; clock      ; 4.208 ; 4.208 ; Rise       ; clock           ;
+;  x[7]     ; clock      ; 4.207 ; 4.207 ; Rise       ; clock           ;
+;  x[8]     ; clock      ; 4.176 ; 4.176 ; Rise       ; clock           ;
+;  x[9]     ; clock      ; 4.313 ; 4.313 ; Rise       ; clock           ;
+;  x[10]    ; clock      ; 4.223 ; 4.223 ; Rise       ; clock           ;
+;  x[11]    ; clock      ; 3.996 ; 3.996 ; Rise       ; clock           ;
+;  x[12]    ; clock      ; 3.969 ; 3.969 ; Rise       ; clock           ;
+;  x[13]    ; clock      ; 4.054 ; 4.054 ; Rise       ; clock           ;
+;  x[14]    ; clock      ; 4.234 ; 4.234 ; Rise       ; clock           ;
+;  x[15]    ; clock      ; 4.084 ; 4.084 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; start     ; clock      ; -2.014 ; -2.014 ; Rise       ; clock           ;
+; x[*]      ; clock      ; -2.087 ; -2.087 ; Rise       ; clock           ;
+;  x[0]     ; clock      ; -2.104 ; -2.104 ; Rise       ; clock           ;
+;  x[1]     ; clock      ; -2.241 ; -2.241 ; Rise       ; clock           ;
+;  x[2]     ; clock      ; -2.205 ; -2.205 ; Rise       ; clock           ;
+;  x[3]     ; clock      ; -2.135 ; -2.135 ; Rise       ; clock           ;
+;  x[4]     ; clock      ; -2.091 ; -2.091 ; Rise       ; clock           ;
+;  x[5]     ; clock      ; -2.233 ; -2.233 ; Rise       ; clock           ;
+;  x[6]     ; clock      ; -2.194 ; -2.194 ; Rise       ; clock           ;
+;  x[7]     ; clock      ; -2.200 ; -2.200 ; Rise       ; clock           ;
+;  x[8]     ; clock      ; -2.194 ; -2.194 ; Rise       ; clock           ;
+;  x[9]     ; clock      ; -2.272 ; -2.272 ; Rise       ; clock           ;
+;  x[10]    ; clock      ; -2.208 ; -2.208 ; Rise       ; clock           ;
+;  x[11]    ; clock      ; -2.109 ; -2.109 ; Rise       ; clock           ;
+;  x[12]    ; clock      ; -2.087 ; -2.087 ; Rise       ; clock           ;
+;  x[13]    ; clock      ; -2.174 ; -2.174 ; Rise       ; clock           ;
+;  x[14]    ; clock      ; -2.215 ; -2.215 ; Rise       ; clock           ;
+;  x[15]    ; clock      ; -2.190 ; -2.190 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cos_X[*]   ; clock      ; 6.955 ; 6.955 ; Rise       ; clock           ;
+;  cos_X[0]  ; clock      ; 6.382 ; 6.382 ; Rise       ; clock           ;
+;  cos_X[1]  ; clock      ; 6.584 ; 6.584 ; Rise       ; clock           ;
+;  cos_X[2]  ; clock      ; 6.414 ; 6.414 ; Rise       ; clock           ;
+;  cos_X[3]  ; clock      ; 6.429 ; 6.429 ; Rise       ; clock           ;
+;  cos_X[4]  ; clock      ; 6.858 ; 6.858 ; Rise       ; clock           ;
+;  cos_X[5]  ; clock      ; 6.347 ; 6.347 ; Rise       ; clock           ;
+;  cos_X[6]  ; clock      ; 6.737 ; 6.737 ; Rise       ; clock           ;
+;  cos_X[7]  ; clock      ; 6.922 ; 6.922 ; Rise       ; clock           ;
+;  cos_X[8]  ; clock      ; 6.955 ; 6.955 ; Rise       ; clock           ;
+;  cos_X[9]  ; clock      ; 6.427 ; 6.427 ; Rise       ; clock           ;
+;  cos_X[10] ; clock      ; 6.639 ; 6.639 ; Rise       ; clock           ;
+;  cos_X[11] ; clock      ; 6.841 ; 6.841 ; Rise       ; clock           ;
+;  cos_X[12] ; clock      ; 6.906 ; 6.906 ; Rise       ; clock           ;
+;  cos_X[13] ; clock      ; 6.783 ; 6.783 ; Rise       ; clock           ;
+;  cos_X[14] ; clock      ; 6.751 ; 6.751 ; Rise       ; clock           ;
+;  cos_X[15] ; clock      ; 6.433 ; 6.433 ; Rise       ; clock           ;
+; done       ; clock      ; 6.693 ; 6.693 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cos_X[*]   ; clock      ; 3.520 ; 3.520 ; Rise       ; clock           ;
+;  cos_X[0]  ; clock      ; 3.520 ; 3.520 ; Rise       ; clock           ;
+;  cos_X[1]  ; clock      ; 3.674 ; 3.674 ; Rise       ; clock           ;
+;  cos_X[2]  ; clock      ; 3.542 ; 3.542 ; Rise       ; clock           ;
+;  cos_X[3]  ; clock      ; 3.552 ; 3.552 ; Rise       ; clock           ;
+;  cos_X[4]  ; clock      ; 3.811 ; 3.811 ; Rise       ; clock           ;
+;  cos_X[5]  ; clock      ; 3.569 ; 3.569 ; Rise       ; clock           ;
+;  cos_X[6]  ; clock      ; 3.699 ; 3.699 ; Rise       ; clock           ;
+;  cos_X[7]  ; clock      ; 3.835 ; 3.835 ; Rise       ; clock           ;
+;  cos_X[8]  ; clock      ; 3.871 ; 3.871 ; Rise       ; clock           ;
+;  cos_X[9]  ; clock      ; 3.552 ; 3.552 ; Rise       ; clock           ;
+;  cos_X[10] ; clock      ; 3.657 ; 3.657 ; Rise       ; clock           ;
+;  cos_X[11] ; clock      ; 3.793 ; 3.793 ; Rise       ; clock           ;
+;  cos_X[12] ; clock      ; 3.832 ; 3.832 ; Rise       ; clock           ;
+;  cos_X[13] ; clock      ; 3.792 ; 3.792 ; Rise       ; clock           ;
+;  cos_X[14] ; clock      ; 3.701 ; 3.701 ; Rise       ; clock           ;
+;  cos_X[15] ; clock      ; 3.554 ; 3.554 ; Rise       ; clock           ;
+; done       ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                               ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; clock                   ; clock                   ; 961      ; 0        ; 0        ; 0        ;
+; controller:inst4|ps.011 ; clock                   ; 17       ; 245      ; 0        ; 0        ;
+; clock                   ; controller:inst4|ps.011 ; 0        ; 0        ; 82       ; 0        ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; clock                   ; clock                   ; 961      ; 0        ; 0        ; 0        ;
+; controller:inst4|ps.011 ; clock                   ; 17       ; 245      ; 0        ; 0        ;
+; clock                   ; controller:inst4|ps.011 ; 0        ; 0        ; 82       ; 0        ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 18    ; 18   ;
+; Unconstrained Input Port Paths  ; 26    ; 26   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 25 14:13:42 2016
+Info: Command: quartus_sta hamed -c hamed
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (335093): TimeQuest Timing Analyzer is analyzing 16 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'hamed.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+    Info (332105): create_clock -period 1.000 -name controller:inst4|ps.011 controller:inst4|ps.011
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.197
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.197      -140.284 clock 
+    Info (332119):    -3.763       -38.254 controller:inst4|ps.011 
+Info (332146): Worst-case hold slack is -1.179
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.179       -12.757 clock 
+    Info (332119):     0.614         0.000 controller:inst4|ps.011 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -59.380 clock 
+    Info (332119):     0.500         0.000 controller:inst4|ps.011 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.537
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.537       -13.772 controller:inst4|ps.011 
+    Info (332119):    -1.167       -28.442 clock 
+Info (332146): Worst-case hold slack is -0.774
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.774       -10.934 clock 
+    Info (332119):     0.770         0.000 controller:inst4|ps.011 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -59.380 clock 
+    Info (332119):     0.500         0.000 controller:inst4|ps.011 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 405 megabytes
+    Info: Processing ended: Wed May 25 14:13:43 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

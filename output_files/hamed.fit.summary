@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed May 25 14:13:39 2016
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : hamed
+Top-level Entity Name : hamed
+Family : Cyclone II
+Device : EP2C5T144C6
+Timing Models : Final
+Total logic elements : 87 / 4,608 ( 2 % )
+    Total combinational functions : 84 / 4,608 ( 2 % )
+    Dedicated logic registers : 58 / 4,608 ( 1 % )
+Total registers : 58
+Total pins : 36 / 89 ( 40 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 2 / 26 ( 8 % )
+Total PLLs : 0 / 2 ( 0 % )

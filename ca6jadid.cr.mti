@@ -1,0 +1,15 @@
+C:/altera/13.0sp1/cajadid/test.v {1 {vlog -work work C:/altera/13.0sp1/cajadid/test.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module finaltest
+
+Top level modules:
+	finaltest
+
+} {} {}} C:/altera/13.0sp1/cajadid/hamed.vo {1 {vlog -work work C:/altera/13.0sp1/cajadid/hamed.vo
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module hamed
+
+Top level modules:
+	hamed
+
+} {} {}}
